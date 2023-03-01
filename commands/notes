@@ -1,0 +1,25 @@
+Notes:-
+1. Command structure: <command -option(s) argument(s)[order of the args matter]>
+2. Space is the command term separator
+3. Options are used to modify the default behavior of the command, its often starts with hyphen '-'
+4. Some commands supports the long form of the options, they start with '--'. Ex: date -u == date --universal
+5. We can compress the options in a single hyphen but not for long form
+6. Some option require the parameters, it is also compressible. Ex: ncal -A 1
+7. When we combine option with its params, other options should be given separately
+8. Navigation in man pages, space or f to next page, b to next page, /pattern for search in page
+9. Content inside [] in synopsis of command means its optional
+10. []... means can accept multiple option/args
+
+Linux Commands:-
+1. date
+2. cal, ncal, ncal 2023, ncal april 1999, ncal -3 -h -j == ncal -3hj
+3. clear
+4. echo: echoes back to the terminal
+5. sort <file>: sorts the content of the file
+6. rm <file>: removes the file
+7. man <command> : documentations
+8. man -k [section] <command search>: for going into manual for the given command
+9. type <command>: for checking type of command (binary execs, shell builtin, shell function, alias)
+10. which <comamnd>: path of the command, where it is located
+11. help <command>: docs for shell builtin commands as man do not contain all shell builtin
+
