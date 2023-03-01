@@ -9,6 +9,16 @@ Notes:-
 8. Navigation in man pages, space or f to next page, b to next page, /pattern for search in page
 9. Content inside [] in synopsis of command means its optional
 10. []... means can accept multiple option/args
+11. / is the top level or root directory in the linux
+12. /home is the directory where the directories of all the user contains. '~' as shortcut for home dir i.e., /home/username
+13. '.' reference for current dir
+14. '..' reference for parent dir
+15. Relative path: Path relative to the current working dir. Ex- cd Desktop given the current dir contains Desktop dir
+16. Absolute path: Starts with '/'. Ex- cd /home/user/Desktop
+17. /bin: It is the binary dir which contains the execs files
+18. /etc: It contains the configuration files and initialization scripts
+19. /media: Accessing the contents of removable media such as sd card, cd rom, usb
+20. /root: all contents for the super user called root
 
 Linux Commands:-
 1. date
@@ -22,4 +32,8 @@ Linux Commands:-
 9. type <command>: for checking type of command (binary execs, shell builtin, shell function, alias)
 10. which <comamnd>: path of the command, where it is located
 11. help <command>: docs for shell builtin commands as man do not contain all shell builtin
+12. xdg-open <path>: to open the path in files gui
+13. pwd: print working dir
+14. ls: list the contents of the dir. Option -l for long listing, -a for hidden files
+15. cd <path>: change directory
 
