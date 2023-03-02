@@ -19,6 +19,7 @@ Notes:-
 18. /etc: It contains the configuration files and initialization scripts
 19. /media: Accessing the contents of removable media such as sd card, cd rom, usb
 20. /root: all contents for the super user called root
+21. '\char': char will have no meaning when put after \, also known as escape character
 
 Linux Commands:-
 1. date
@@ -36,4 +37,7 @@ Linux Commands:-
 13. pwd: print working dir
 14. ls: list the contents of the dir. Option -l for long listing, -a for hidden files
 15. cd <path>: change directory
+16. touch <path/filename>: create file(s)
+17. file <filename>: file type by some type of test not by extention
+18. mkdir <dirname/path>: create directory
 
