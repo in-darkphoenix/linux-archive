@@ -21,7 +21,7 @@ Notes:-
 20. /root: all contents for the super user called root
 21. '\char': char will have no meaning when put after \, also known as escape character
 22. 'nano' shortcuts: ctrl+s to save, ctrl+o to save in file prompt, ctrl+x to exit nano, meta+$ to soft warpping for long lines, ctrl+w for searching
-23. ctrl+r to add content of another file, ctrl+t and ctrl+s to spell check, ctrl+\ for replace
+23. ctrl+r to add content of another file, ctrl+t and ctrl+s to spell check, ctrl+\ for replace, ctrl+/ to go to line
 23. Meta/M key is 'alt' here, we can see relevant options at the bottom while performing certain operation so keep looking there
 
 Linux Commands:-
