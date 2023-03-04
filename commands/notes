@@ -38,10 +38,37 @@ Linux Commands:-
 11. help <command>: docs for shell builtin commands as man do not contain all shell builtin
 12. xdg-open <path>: to open the path in files gui
 13. pwd: print working dir
-14. ls: list the contents of the dir. Option -l for long listing, -a for hidden files
+14. ls: list the contents of the dir. Option -l for long listing, -a for hidden files, -R for recursive view
 15. cd <path>: change directory
 16. touch <path/filename>: create file(s)
 17. file <filename>: file type by some type of test not by extention
 18. mkdir <dirname/path>: create directory
 19. nano <filename(optional)>: Interactive cmd line file editor with user friendly functionality, creates file if doesn't exist
+20. rm <filename>: delete file/dirs permanently, -d option to delete empty dir, -r remove dirs recursively empty or not, -i to prompt for each removal
+21. rmdir <filename>: remove empty dir
+22. mv <src file/dir>(s) <dstn>: move file/dirs to destination path
+23. mv <curr> <new name>: rename file/dir
+24. cp <src file/dir>(s) <dstn>: copy file/dirs to destination path, -r for copy dirs recursively
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
