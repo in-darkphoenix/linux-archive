@@ -23,6 +23,11 @@ Notes:-
 22. 'nano' shortcuts: ctrl+s to save, ctrl+o to save in file prompt, ctrl+x to exit nano, meta+$ to soft warpping for long lines, ctrl+w for searching
 23. ctrl+r to add content of another file, ctrl+t and ctrl+s to spell check, ctrl+\ for replace, ctrl+/ to go to line
 23. Meta/M key is 'alt' here, we can see relevant options at the bottom while performing certain operation so keep looking there
+24. git config --list for listing configuration
+25. commands killed is stored in the kill ring
+26. previous commands are stored in ~/.bash_history
+27. $HISTFILESIZE, $HISTSIZE:- HISTSIZE is the number of lines or commands that are stored in memory in a history list while your bash session is ongoing. 
+28. HISTFILESIZE is the number of lines or commands that (a) are allowed in the history file at startup time of a session, and (b) are stored in the history file at the end of your bash session for use in future sessions. Notice the distinction between file: on disk - and list: in memory.
 
 Linux Commands:-
 1. date
@@ -49,6 +54,22 @@ Linux Commands:-
 22. mv <src file/dir>(s) <dstn>: move file/dirs to destination path
 23. mv <curr> <new name>: rename file/dir
 24. cp <src file/dir>(s) <dstn>: copy file/dirs to destination path, -r for copy dirs recursively
+25. !<number> to run command from command history log
+26. ctrl+r to enter command search mode from history log
+
+Shortcuts:-
+1. ctrl+l to clear terminal
+2. ctrl+a and ctrl+e to navigate cursor to begining and end of the line
+3. ctrl+f and ctrl+b to move cursor forward and backward over character
+4. alt+f and alt+b to move cursor forward and backward over word
+5. ctrl+t to swap character with its previous
+6. alt+t to swap word with its previous
+7. ctrl+k to kill the line to the end of the cursor
+8. ctrl+u to kill the line to the start of the cursor
+9. alt+d to kill the word to the end of the cursor on that word
+10. ctrl+w to kill the word to the end of the cursor on that word
+11. ctrl+y to retrieve the command from kill ring 
+
 
 
 
