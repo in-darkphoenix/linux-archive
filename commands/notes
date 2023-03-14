@@ -27,7 +27,8 @@ Notes:-
 25. commands killed is stored in the kill ring
 26. previous commands are stored in ~/.bash_history
 27. $HISTFILESIZE, $HISTSIZE:- HISTSIZE is the number of lines or commands that are stored in memory in a history list while your bash session is ongoing. 
-28. HISTFILESIZE is the number of lines or commands that (a) are allowed in the history file at startup time of a session, and (b) are stored in the history file at the end of your bash session for use in future sessions. Notice the distinction between file: on disk - and list: in memory.
+28. HISTFILESIZE is the number of lines or commands that (a) are allowed in the history file at startup time of a session, and (b) are stored in the history file at the end of your bash session for use in future sessions. Notice the distinction between file: on disk - and list: in memory
+29. man command use less cmd, so all shortcuts work as mentioned in point 8
 
 Linux Commands:-
 1. date
@@ -56,6 +57,23 @@ Linux Commands:-
 24. cp <src file/dir>(s) <dstn>: copy file/dirs to destination path, -r for copy dirs recursively
 25. !<number> to run command from command history log
 26. ctrl+r to enter command search mode from history log
+27. cat <file>: concatenates or print the contemts of a file
+28. less <file>: displays the content of a file in interactive mode via per page
+29. tac <file>: cat but in reverse order w.r.t. line, vertical reverse
+30. rev <file>: cat but horizontal reverse
+31. head <file>: displays the content of first specified n(def=10) line, from start
+	head/tail -n 3 file: first/last 3 lines
+	head/tail -6 file: first/last 6 lines
+	-c <bytes>: for the content size
+32. tail <file>: displays the content of last specified n(def=10) line, from end
+	-f: monitor the new updates in a file
+33. wc <file>: prints the count of words, lines and bytes followed by file name
+	-l, -w, -c: lines, words, bytes 
+34. sort <file>: outputs the sorted(def=alphabetically line wise, lower case comes first, number is lexographic) contents of a file
+	-r: reverse order
+	-n: numeric sort
+	-u: ignore duplicates
+	-k[value]: sort particular column
 
 Shortcuts:-
 1. ctrl+l to clear terminal
