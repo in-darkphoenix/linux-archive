@@ -29,6 +29,11 @@ Notes:-
 27. $HISTFILESIZE, $HISTSIZE:- HISTSIZE is the number of lines or commands that are stored in memory in a history list while your bash session is ongoing. 
 28. HISTFILESIZE is the number of lines or commands that (a) are allowed in the history file at startup time of a session, and (b) are stored in the history file at the end of your bash session for use in future sessions. Notice the distinction between file: on disk - and list: in memory
 29. man command use less cmd, so all shortcuts work as mentioned in point 8
+30. Standard input/output/error are the communication channel between computer and its environment
+31. We can combine <, >, >> in a single command
+32. All streams has numeric file descriptors, ip=0, op=1, err=2, hence we can use 1>, 0< etc
+33. Orders matter while combining std op and err the op comes before err
+34. If we want to redr. the std output and error stream in same file we use: ls -l > output.txt 2>&1 or ls -l &> output.txt, we can also use '&>>'
 
 Linux Commands:-
 1. date
@@ -69,11 +74,16 @@ Linux Commands:-
 	-f: monitor the new updates in a file
 33. wc <file>: prints the count of words, lines and bytes followed by file name
 	-l, -w, -c: lines, words, bytes 
-34. sort <file>: outputs the sorted(def=alphabetically line wise, lower case comes first, number is lexographic) contents of a file
+34. sort <file>: outputs the sorted(def=alphabetically line wise, lower case comes first, number is lexicographic) contents of a file
 	-r: reverse order
 	-n: numeric sort
 	-u: ignore duplicates
 	-k[value]: sort particular column
+35. '>': for redirecting output. Ex- date > today means redirect the output stream from 'date' command to file named 'today' (overwrite)
+36. '>>': > but append
+37. echo [...] >/>> <file>: to create a file with content
+38. '<': for redirecting input. Ex- cat < today means redirect the content from file named 'today' as input stream to the 'cat' command
+39. '2>'/'2>>': for redirecting std error
 
 Shortcuts:-
 1. ctrl+l to clear terminal
