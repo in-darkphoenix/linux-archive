@@ -34,6 +34,8 @@ Notes:-
 32. All streams has numeric file descriptors, ip=0, op=1, err=2, hence we can use 1>, 0< etc
 33. Orders matter while combining std op and err the op comes before err
 34. If we want to redr. the std output and error stream in same file we use: ls -l > output.txt 2>&1 or ls -l &> output.txt, we can also use '&>>'
+35. We use the pipe '|' character for pipelining the inputs/outputs of the command. The output of the first command will be send to the std ip of the second command
+36. We should note that when we are redirecting we are redi to file and when we are piping we are connecting the commands. We can combine piping and redirecting
 
 Linux Commands:-
 1. date
@@ -84,6 +86,11 @@ Linux Commands:-
 37. echo [...] >/>> <file>: to create a file with content
 38. '<': for redirecting input. Ex- cat < today means redirect the content from file named 'today' as input stream to the 'cat' command
 39. '2>'/'2>>': for redirecting std error
+40. ls /usr/bin -1 | wc -l: counting the line we got from ls -1(put all contents line wise) for path
+41. tr [set1] [set2]: translates, squueze or delete the character from std ip and provide std op. Ex- cat message | tr s S: change s with S on the message file's content
+42. tr -d [:alpha:]: delete any alphabets
+43. du <path>: ops the size of the content of the path
+44. 'tee' command is used for piplining the output and also redirect the op in file. Ex- cat f1 f2 | tee f1f2 | wc: concatenate the f1 f2 files in op and pipline the op to wc command
 
 Shortcuts:-
 1. ctrl+l to clear terminal
