@@ -36,6 +36,17 @@ Notes:-
 34. If we want to redr. the std output and error stream in same file we use: ls -l > output.txt 2>&1 or ls -l &> output.txt, we can also use '&>>'
 35. We use the pipe '|' character for pipelining the inputs/outputs of the command. The output of the first command will be send to the std ip of the second command
 36. We should note that when we are redirecting we are redi to file and when we are piping we are connecting the commands. We can combine piping and redirecting
+37. Wildcard characters(aka globbing patterns) is used to build patterns to match multiple files, if no match comes then they are considered simple character
+	* -> matches anything, i.e., range is 0-many characters
+	? -> matches exactly 1 character
+	[] -> matches specified range of character. Ex- [123], [0-9], [A-Z]
+	[^] -> excludes specified range
+	~ -> /home/<user>
+38. {} -> generate arbitrary string. It will generate multiple string based on the pattern. Ex- touch app{1,2,3,4,5}.css -> make 3 files app1.css to app5.css. Multiple {} outputs the 	cartesian product, touch j{1..365} will generate j1 to j365 files, syntax-> {start..end..skip}, we can nest {}
+39. Arithmetic operation: $((expression)). Ex- $((2+2)) will be 4, $ in shell is prefix for variables
+40. Double Quotes: It will consider as specified string as given except --> $, \, ` <--
+41. Single Quotes: Double Quotes but no exception
+42. Command subs: $(command) or `command`. Ex- echo $(whoami) will op as ankit
 
 Linux Commands:-
 1. date
