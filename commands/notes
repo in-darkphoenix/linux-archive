@@ -47,6 +47,8 @@ Notes:-
 40. Double Quotes: It will consider as specified string as given except --> $, \, ` <--
 41. Single Quotes: Double Quotes but no exception
 42. Command subs: $(command) or `command`. Ex- echo $(whoami) will op as ankit
+43. Timestamps: mtime(modification time when last content was changed), ctime(change time while file was moved, renamed, edit permission), atime(access time when file read by another 	applicatiuon or command)
+44. exec will run everytime for each output pattern
 
 Linux Commands:-
 1. date
@@ -62,9 +64,15 @@ Linux Commands:-
 11. help <command>: docs for shell builtin commands as man do not contain all shell builtin
 12. xdg-open <path>: to open the path in files gui
 13. pwd: print working dir
-14. ls: list the contents of the dir. Option -l for long listing, -a for hidden files, -R for recursive view
+14. ls: list the contents of the dir.
+	-l for long listing (mtime view), 
+	-a for hidden files, 
+	-R for recursive view
+	-lc for change time view
+	-lc for access time view
 15. cd <path>: change directory
 16. touch <path/filename>: create file(s)
+	touch file -d "date as string": make file with provided time as mtime
 17. file <filename>: file type by some type of test not by extention
 18. mkdir <dirname/path>: create directory
 19. nano <filename(optional)>: Interactive cmd line file editor with user friendly functionality, creates file if doesn't exist
@@ -102,6 +110,28 @@ Linux Commands:-
 42. tr -d [:alpha:]: delete any alphabets
 43. du <path>: ops the size of the content of the path
 44. 'tee' command is used for piplining the output and also redirect the op in file. Ex- cat f1 f2 | tee f1f2 | wc: concatenate the f1 f2 files in op and pipline the op to wc command
+45. locate <query>: search for pathname coress. to query and return any matching substring, creates and make use of its database
+	-l<n>: limit to n results
+	-e: if exist at the time locate is run
+	-i: ignore case
+46. updatedb: update database plocate database
+47. find <query>: finds path(files/dirs) on the spot slow but powerful, do not make use of database
+	-type f/d: for file and dirs
+	-name "pattern": search pattern
+	-not or !: all except given pattern
+	-and: must match all pattern (implied or default)
+	-or: any one pattern match
+	-iname: ignore case 
+	-size size: filter via size, +size for >size and -size for <size (no sign so exact match). Ex: find path -size +5G, find path -size -50M
+	-empty: find empty
+	-mmin/-cmin/-amin: m,c,a time in minutes
+	-mtime/-ctime/-atime: m,c,a time in 24 hr period. or days
+	-exec command '{}' ';': for mapping each result of find to be executed by the given command where {} is replaced by the result of find. We have to give quotes its conventional
+	-ok command....: asks for all result to execute given command or not
+	-user user: finds for that given user
+	-newer reference: finds with the mtime wrt to the mtime of reference file
+	Ex: find -name "*.txt" -exec ls '{}' ';' is equal to find -name "*.txt" | xargs ls
+48. xargs: builds and executes command lines from standard inputs can be used instead of exec, it is usually piplined
 
 Shortcuts:-
 1. ctrl+l to clear terminal
