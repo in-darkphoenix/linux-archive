@@ -49,6 +49,7 @@ Notes:-
 42. Command subs: $(command) or `command`. Ex- echo $(whoami) will op as ankit
 43. Timestamps: mtime(modification time when last content was changed), ctime(change time while file was moved, renamed, edit permission), atime(access time when file read by another 	applicatiuon or command)
 44. exec will run everytime for each output pattern
+45. RegEx has no support for meta but extended RegEx does, we can pipline grep
 
 Linux Commands:-
 1. date
@@ -132,6 +133,19 @@ Linux Commands:-
 	-newer reference: finds with the mtime wrt to the mtime of reference file
 	Ex: find -name "*.txt" -exec ls '{}' ';' is equal to find -name "*.txt" | xargs ls
 48. xargs: builds and executes command lines from standard inputs can be used instead of exec, it is usually piplined
+49. grep pattern file: searches for pattern inside file content and ops matched pattern in new line
+	pattern types: [...]- match any one entry in it. Ex- "ra[ks]hi"-> rakhi or rashi
+	-w: search for exact word
+	-r: search in dir recursively
+	-i: case insensitive
+	-c: times the pattern matched
+	-An or -Bn or -Cn: print the n lines after or before or after and before both the matched pattern line
+	-n: line number
+	-m n: limiting upto n
+	-E: support for extended regex or just egrep
+	-l: show file name
+	-I: ignore binary match
+50. ps -aux: list current processes
 
 Shortcuts:-
 1. ctrl+l to clear terminal
@@ -145,6 +159,18 @@ Shortcuts:-
 9. alt+d to kill the word to the end of the cursor on that word
 10. ctrl+w to kill the word to the end of the cursor on that word
 11. ctrl+y to retrieve the command from kill ring 
+
+Regular Expression:-
+*: matches any single char
+^: matches start at line
+$: matches end of line
+[abc]: matches any char in set
+[^abc]: prev complement
+[A-Z]: matches char in range
+*: repeat prev pattern 0 or more times
+\: escape meta chars
+?: 0 or 1 char
+{n}: repeat n times
 
 
 
