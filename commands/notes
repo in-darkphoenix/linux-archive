@@ -50,6 +50,17 @@ Notes:-
 43. Timestamps: mtime(modification time when last content was changed), ctime(change time while file was moved, renamed, edit permission), atime(access time when file read by another 	applicatiuon or command)
 44. exec will run everytime for each output pattern
 45. RegEx has no support for meta but extended RegEx does, we can pipline grep
+46. Unix and unix-like systems are multiuser operating systems. More than one person can be using the same computer at the same time 
+47. File Attributes -rw-rw-r-- The weird looking 10 characters we see printed out first are the file attributes. These characters tell us the type of the file, the read, write, and execute 	permissions for the file's owner, the file's group owner, and everyone else.
+49. file types:
+	-: regular file
+	d: dir
+	l: symbolic link
+	c: character special file
+50. Permission:
+	r: f-> file can be read; d-> directory's contents can be listed
+	w: f-> file can be modified; d-> directory's contents can be modified (create new files, rename files/folders) but only if the executable attribute is also set (as to write they have 		to cd into it)
+	x: f-> file can be treated as a program to be executed; d-> allows a directory to be entered or "cd"ed into
 
 Linux Commands:-
 1. date
@@ -146,6 +157,8 @@ Linux Commands:-
 	-l: show file name
 	-I: ignore binary match
 50. ps -aux: list current processes
+51. id: to view user and group ids.
+
 
 Shortcuts:-
 1. ctrl+l to clear terminal
