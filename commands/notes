@@ -61,6 +61,9 @@ Notes:-
 	r: f-> file can be read; d-> directory's contents can be listed
 	w: f-> file can be modified; d-> directory's contents can be modified (create new files, rename files/folders) but only if the executable attribute is also set (as to write they have 		to cd into it)
 	x: f-> file can be treated as a program to be executed; d-> allows a directory to be entered or "cd"ed into
+51. Octal representatopn of permission:
+	0-7 base 8 nos. to binary in pattern rwx. Ex 011 means read no write yes exec yes
+52. root user is the powerfull user will all the access. Ex they can run any file, chmod any file, change owner so by default in ubuntu it is locked for security reasons
 
 Linux Commands:-
 1. date
@@ -157,8 +160,18 @@ Linux Commands:-
 	-l: show file name
 	-I: ignore binary match
 50. ps -aux: list current processes
-51. id: to view user and group ids.
-
+51. id: to view user and group ids
+52. chmod mode file: alter permission
+	u: user, g: group, o: other, a: all
+	+: grant perm, -: revoke perm, =: sets a perm and remove others (set 'only' that perm)
+	r/w/x: read/write/exec
+	Ex: chmod g+w file: grant write perm for group for the file
+53. Octal binary: chmod 755 file: give 7(111) to user and 5(101) to group and all
+54. su - user: login as specified user if - not present it wont change the directory in which the command was given
+55. sudo comamnd: exec the command as root user (it will prompt for user password live for 15 mins) we cant login as root user
+56. chown owner[:group]/reference file: change the file respective owner
+57. addgroup groupname: make group
+	adduser username groupname: add user to group
 
 Shortcuts:-
 1. ctrl+l to clear terminal
